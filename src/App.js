@@ -10,6 +10,9 @@ function App() {
         <div className="App">
             <header className="App__Header">
                 VF Simulator
+                <div className="App__SourceLink">
+                    <a target="source" href="https://github.com/wexel17/vfsim">Source Code / README</a>
+                </div>
             </header>
             <main className="App__Main">
                 <section className="App__Results">

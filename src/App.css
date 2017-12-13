@@ -13,6 +13,14 @@ html, body, #root, .App, .App__Main {
   padding: 1em;
 }
 
+.App__SourceLink {
+  float: right;
+}
+
+.App__SourceLink a {
+  color: white;
+}
+
 .App__Main {
   display: flex;
   flex-direction: row;
