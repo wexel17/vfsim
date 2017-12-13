@@ -2,7 +2,7 @@
 
 This is a simulator to estimate the number of hits and rough damage per turn of a hero team for the game Valiant Force.
 
-You can try it out here: [VF Sim](https://wexel17.github.io/vfsim)
+You can try it out here: [VF Sim](https://wexel17.github.io/)
 
 It makes a lot of simplifying assumptions including:
 
