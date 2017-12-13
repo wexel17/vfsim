@@ -17,10 +17,15 @@ const HERO_OPTIONS = allHeroes
     }))
     .sort((a, b) => a.label.localeCompare(b.label));
 
-function Configure({ position, hero, changeHero, changeHeroStat, defense }) {
+const RUNE_OPTIONS = [
+    { label: 'vampire',       value: 'vampire' },
+    { label: 'double strike', value: 'double'  },
+];
+
+function Configure({ position, hero, changeHero, changeHeroStat, changeRune, defense }) {
     if (position) {
-        const selectedLabel = hero ? createLabel(hero) : 'NONE';
-        const selectedOption = hero ? HERO_OPTIONS.find(o => o.label === selectedLabel) : null;
+        const selectedHeroLabel = hero ? createLabel(hero) : 'NONE';
+        const selectedHeroOption = hero ? HERO_OPTIONS.find(o => o.label === selectedHeroLabel) : null;
         return (
             <div className="Configure">
                 <table><tbody>
@@ -29,7 +34,7 @@ function Configure({ position, hero, changeHero, changeHeroStat, defense }) {
                         <td>
                             <Select
                                 options={HERO_OPTIONS}
-                                value={selectedOption}
+                                value={selectedHeroOption}
                                 onChange={changeHero(position)}
                             />
                         </td>
@@ -38,7 +43,7 @@ function Configure({ position, hero, changeHero, changeHeroStat, defense }) {
                         <th>Attack:</th>
                         <td>
                             <NumberInput
-                                key={selectedLabel}
+                                key={selectedHeroLabel}
                                 disabled={!hero}
                                 defaultValue={hero ? hero.attack : ''}
                                 onChange={changeHeroStat(position, 'attack')}
@@ -56,7 +61,7 @@ function Configure({ position, hero, changeHero, changeHeroStat, defense }) {
                         <th>Crit:</th>
                         <td>
                             <NumberInput
-                                key={selectedLabel}
+                                key={selectedHeroLabel}
                                 disabled={!hero}
                                 defaultValue={hero ? hero.crit : ''}
                                 onChange={changeHeroStat(position, 'crit')}
@@ -67,6 +72,17 @@ function Configure({ position, hero, changeHero, changeHeroStat, defense }) {
                         <th/>
                         <td className="Configure__info">
                             Crit rate: {hero ? Math.min(75, hero.crit / 91).toFixed(1) : '?'}%
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Rune:</th>
+                        <td>
+                            <Select
+                                options={RUNE_OPTIONS}
+                                disabled={!hero}
+                                value={hero ? hero.rune : ''}
+                                onChange={changeRune(position)}
+                            />
                         </td>
                     </tr>
                 </tbody></table>
@@ -106,6 +122,9 @@ function mapDispatchToProps(dispatch) {
             if (event.target.validity.valid) {
                 dispatch({ type: 'change_hero_stat', value: event.target.value, position, stat });
             }
+        },
+        changeRune: position => option => {
+            dispatch({ type: 'change_hero_stat', value: option ? option.value : 'none', position, stat: 'rune' });
         }
     };
 }

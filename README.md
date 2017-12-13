@@ -10,7 +10,6 @@ It makes a lot of simplifying assumptions including:
 - persistent aura buffs are not implemented
 - auras are considered to go in all four directions
 - active skills are not implemented
-- skill runes are implemented but not yet configurable
 
 Simply run the app with `yarn start` and configure squares in the grid to start simulating. The simulation is restarted automatically whenever a setting is changed.
 

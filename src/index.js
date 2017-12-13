@@ -59,6 +59,7 @@ function saveHeroes(heroes) {
             magic: hero.magic,
             hp: hero.hp,
             crit: hero.crit,
+            rune: hero.rune,
         };
     });
     localStorage.heroes = JSON.stringify(heroData);
