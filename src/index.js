@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import './index.css';
 import heroes from './heroes';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 import Simulator  from "./simulator";
 import Counter from "./counter";
 
@@ -150,7 +149,6 @@ function reduce(state = INITIAL_STATE, action) {
 let store = createStore(reduce);
 
 ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById('root'));
-registerServiceWorker();
 
 function advanceSimulation() {
     try {
