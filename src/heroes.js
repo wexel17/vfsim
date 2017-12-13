@@ -193,6 +193,22 @@ export default [{
         react('hit', hero, 1.00);
     }
 }, {
+    name: 'Gwen',
+    className: 'Gunslinger',
+    attack: 3041,
+    defense: 1463,
+    hp: 6000,
+    crit: 2667,
+    magic: 1463,
+    triggerOn: 'self',
+    triggerType: 'crit',
+    triggerChance: 0.95,
+    trigger(react, hero) {
+        hero.allies.forEach(ally => {
+            react('hit', ally, 0.85);
+        });
+    }
+}, {
     name: 'Kahuna',
     className: 'Spirit Walker',
     attack: 2753,
@@ -404,6 +420,22 @@ export default [{
         react('heal', hero);
         hero.allies.forEach(ally => {
             react('heal', ally);
+        });
+    }
+}, {
+    name: 'Vivi',
+    className: 'Machine',
+    attack: 3216,
+    defense: 2420,
+    hp: 5653,
+    crit: 2486,
+    magic: 1143,
+    triggerOn: 'self',
+    triggerType: 'crit',
+    triggerChance: 0.95,
+    trigger(react, hero) {
+        hero.allies.forEach(ally => {
+            react('hit', ally, 0.80);
         });
     }
 }];
