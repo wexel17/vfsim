@@ -123,6 +123,62 @@ export default [{
         });
     }
 }, {
+    name: 'Darrion',
+    className: 'Blood Knight',
+    attack: 4391,
+    defense: 3325,
+    hp: 9208,
+    crit: 788,
+    magic: 1470,
+    triggerOn: 'self/ally',
+    triggerType: 'hit',
+    triggerChance: 1,
+    trigger(react, hero, actor, damage) {
+        react('heal', actor, damage * 0.30);
+    }
+}, {
+    name: 'Drake',
+    className: 'Dragoon',
+    attack: 4509,
+    defense: 1892,
+    hp: 7515,
+    crit: 1273,
+    magic: 725,
+    triggerOn: 'self',
+    triggerType: 'heal',
+    triggerChance: 0.30,
+    trigger(react, hero) {
+        react('hit', hero, 0.80);
+    }
+}, {
+    name: 'Drake',
+    className: 'Gladiator',
+    attack: 4385,
+    defense: 2634,
+    hp: 7515,
+    crit: 654,
+    magic: 725,
+    triggerOn: 'self/ally',
+    triggerType: 'hit',
+    triggerChance: 1,
+    trigger(react, hero, actor, damage) {
+        react('heal', actor, damage * 0.25);
+    }
+}, {
+    name: 'Eliza',
+    className: 'Dragoon',
+    attack: 4630,
+    defense: 1942,
+    hp: 7717,
+    crit: 1307,
+    magic: 744,
+    triggerOn: 'self/ally',
+    triggerType: 'hit',
+    triggerChance: 1,
+    trigger(react, hero, actor, damage) {
+        react('heal', actor, damage * 0.15);
+    }
+}, {
     name: 'Emilia',
     className: 'Inquisitor',
     attack: 2922,
