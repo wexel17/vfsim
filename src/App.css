@@ -1,0 +1,29 @@
+html, body, #root, .App, .App__Main {
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.App__Header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+}
+
+.App__Main {
+  display: flex;
+  flex-direction: row;
+}
+
+.App__Results {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.App__Configure {
+  flex: 0 0 33%;
+  background-color: #f0f0f0;
+}

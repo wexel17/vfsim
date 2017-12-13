@@ -1,0 +1,30 @@
+.Configure {
+    margin: 2em;
+}
+
+.Configure th, .Configure td {
+    padding: 0.5em;
+}
+
+.Configure th {
+    text-align: left;
+}
+
+.Configure .Select {
+    width: 15em;
+}
+
+.Configure .NumberInput {
+    width: 15em;
+}
+
+td.Configure__info {
+    font-size: 75%;
+    padding-top: 0;
+}
+
+.Configure__note {
+    font-style: italic;
+    margin: 1em;
+    width: 20em;
+}

@@ -1,0 +1,13 @@
+.Simulation {
+    margin: auto;
+}
+
+.Simulation th {
+    text-align: right;
+    width: 10em;
+}
+
+.Simulation td {
+    text-align: left;
+    width: 15em;
+}

@@ -1,0 +1,31 @@
+.Hero {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #999;
+    align-items: center;
+    justify-content: center;
+}
+
+.Hero:hover  {
+    border: 2px outset #666;
+}
+
+.Hero--empty {
+    background-color: #f0f0f0;
+}
+
+.Hero--selected {
+    background-color: lightblue;
+}
+
+.Hero__Name {
+}
+
+.Hero__Class {
+    font-size: 75%;
+    color: #666;
+}
+
+.Hero__Hits {
+    margin: 1em;
+}

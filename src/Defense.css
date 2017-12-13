@@ -1,0 +1,18 @@
+.Defense {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.Defense__label {
+    font-weight: bold;
+}
+
+.Defense__range {
+    width: 360px;
+    margin: 0 1em;
+}
+
+.Defense__number {
+    width: 6em;
+}
