@@ -16,6 +16,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "update-demo": "cp -R build/* ../wexel17.github.io"
+    "update-demo": "rm -r ../wexel17.github.io/* && cp -R build/* ../wexel17.github.io && cd ../wexel17.github.io && git add . && git commit -m 'update'"
   }
 }
